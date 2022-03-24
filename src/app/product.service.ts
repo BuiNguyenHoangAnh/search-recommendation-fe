@@ -6,7 +6,7 @@ import {Product} from '../model/product.model';
 const httpOptions ={
   headers:new HttpHeaders({'Content-Type':'Application/json'})
 }
-const apiUrl = 'http://127.0.0.1:8000/search';
+const apiUrl = 'http://0.0.0.0:5000/search';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class ProductService {
   constructor(private httpClient:HttpClient) { }
 
   getAll(paramValue):Observable<Product[]>{
-    let header = new HttpHeaders().set("search_term",paramValue)
-    return this.httpClient.post<Product[]>(apiUrl, {headers: header}).pipe()
+    let body = {search_term: paramValue}
+    return this.httpClient.post<Product[]>(apiUrl, body).pipe()
   }
 }

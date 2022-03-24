@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../app/product.service';
-import { Product } from '../model/product.model'
+import { Product } from '../model/product.model';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +23,7 @@ export class AppComponent {
 
   getProduct(){
     this.productService.getAll(this.value).subscribe((res:any)=>{
-      this.list = res
+      this.list = res.top_result
     })
   }
 }

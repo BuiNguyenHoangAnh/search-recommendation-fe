@@ -14,7 +14,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 
 <!-- Introduction Bar -->
 <div class="w3-bar w3-white w3-border-bottom w3-xlarge">
-  <span>Team...<div class=""></div></span>
+  <span>Nhóm 14<div class=""></div></span>
 </div>
 
 <!-- Header -->
@@ -33,15 +33,42 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 
   <!-- Good offers -->
   <div class="w3-container w3-margin-top">
-    <h3>Good Offers Right Now</h3>
+    <h3>Top 5 Results</h3>
   </div>
   <div class="w3-row-padding w3-text-white w3-large">
-    <div>
-      <div class="w3-row-padding" style="margin:0 -16px" *ngFor = "let item of list">
+    <div class="w3-half w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="../assets/products/{{list[0].product_uid}}.jpg" onerror="if (this.src != '../assets/images/err.jpg') this.src = '../assets/images/err.jpg';" title="score: {{list[0].score_relevance}}" style="width:100%;">
+        <span class="w3-display-bottomleft w3-padding" style="color: black;">{{list[0].product_title}}</span>
+      </div>
+    </div>
+    <div class="w3-half">
+      <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-margin-bottom w3-half">
           <div class="w3-display-container">
-            <img src="../assets/products/{{item.product_uid}}" alt="New York" style="width:100%">
-            <span class="w3-display-bottomleft w3-padding" style="color: black;">{{item.product_title}}</span>
+            <img src="../assets/products/{{list[1].product_uid}}.jpg" onerror="if (this.src != '../assets/images/err.jpg') this.src = '../assets/images/err.jpg';" title="score: {{list[1].score_relevance}}" style="width:100%;">
+            <span class="w3-display-bottomleft w3-padding" style="color: black;">{{list[1].product_title}}</span>
+          </div>
+        </div>
+
+        <div class="w3-margin-bottom w3-half">
+          <div class="w3-display-container">
+            <img src="../assets/products/{{list[2].product_uid}}.jpg" onerror="if (this.src != '../assets/images/err.jpg') this.src = '../assets/images/err.jpg';" title="score: {{list[2].score_relevance}}" style="width:100%;">
+            <span class="w3-display-bottomleft w3-padding" style="color: black;">{{list[2].product_title}}</span>
+          </div>
+        </div>
+
+        <div class="w3-margin-bottom w3-half">
+          <div class="w3-display-container">
+            <img src="../assets/products/{{list[3].product_uid}}.jpg" onerror="if (this.src != '../assets/images/err.jpg') this.src = '../assets/images/err.jpg';" title="score: {{list[3].score_relevance}}" style="width:100%;">
+            <span class="w3-display-bottomleft w3-padding" style="color: black;">{{list[3].product_title}}</span>
+          </div>
+        </div>
+
+        <div class="w3-margin-bottom w3-half">
+          <div class="w3-display-container">
+            <img src="../assets/products/{{list[4].product_uid}}.jpg" onerror="if (this.src != '../assets/images/err.jpg') this.src = '../assets/images/err.jpg';" title="score: {{list[4].score_relevance}}" style="width:100%;">
+            <span class="w3-display-bottomleft w3-padding" style="color: black;">{{list[4].product_title}}</span>
           </div>
         </div>
       </div>
